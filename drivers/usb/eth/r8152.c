@@ -629,6 +629,9 @@ static int r8152_read_mac(struct r8152 *tp, unsigned char *macaddr)
 	if (ret < 0)
 		return ret;
 
+	if(is_zero_ethaddr(enetaddr) || !is_valid_ethaddr(enetaddr))
+		net_random_ethaddr(enetaddr);
+
 	memcpy(macaddr, enetaddr, ETH_ALEN);
 	return 0;
 }
