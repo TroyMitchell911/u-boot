@@ -297,6 +297,7 @@
 	"uuid_gpt_system=" UUID_GPT_SYSTEM "\0" \
 	"partitions=" PARTS_DEFAULT "\0" \
 	BOOTCMD_SUNXI_COMPAT \
-	BOOTENV
+	BOOTENV \
+	"autoload=no"
 
 #endif /* _SUNXI_COMMON_CONFIG_H */
